@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-color="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="color-toggler">
+        <div class="toggle-btn">
+            <div id="inputToggle" type="checkbox"></div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="form-header">
+            <h1>Account Login</h1>
+        </div>
+        <div class="form-content">
+            <form>
+                <div class="form-group">
+                    <input type="text" required="required" placeholder="Username"/>
+                </div>
+                <div class="form-group">
+                    <input type="password" required="required" placeholder="Password"/>
+                </div>
+                <div class="form-footer">
+                    <button type="submit">Log In</button>
+                    <a class="form-forget" href="#">Forget Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    const switcher = document.querySelector('.color-toggler')
+          root = document.getElementsByTagName('html')[0];
+
+          switcher.addEventListener('click', function() {
+            if(root.getAttribute("data-color") === "light")
+                root.setAttribute("data-color","dark");
+            else
+                root.setAttribute('data-color' , "light");
+          });
+</script>
+</html>
